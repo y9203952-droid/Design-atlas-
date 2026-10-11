@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Design Atlas</title>
+  <meta name="description" content="Searchable atlas of design resources, inspiration galleries, open-source kits, and brand systems parsed from the repos in this workspace." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="top">
+    <a class="mark" href="#">
+      <span class="mark-dot"></span>
+      Design Atlas
+    </a>
+    <nav class="top-nav">
+      <button type="button" data-kind="all" class="nav-btn is-on">All</button>
+      <button type="button" data-kind="resource" class="nav-btn">Resources</button>
+      <button type="button" data-kind="brand" class="nav-btn">Brand systems</button>
+    </nav>
+    <p class="kbd-hint"><kbd>/</kbd> to search</p>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">From the lists you cloned</p>
+      <h1>Every design resource in one index.</h1>
+      <p class="lede">
+        Parsed from Awesome Design Resources, Inspiration, Open Source Design,
+        Web Design, and 74 DESIGN.md brand systems.
+      </p>
+      <label class="search" for="q">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <circle cx="7" cy="7" r="4.5" stroke="currentColor" stroke-width="1.4"/>
+          <path d="M10.5 10.5L14 14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+        </svg>
+        <input id="q" type="search" placeholder="Search Coolors, Linear, Lucide, Awwwards..." autocomplete="off" />
+      </label>
+      <div class="stats" id="stats"></div>
+    </section>
+
+    <section class="toolbar">
+      <div class="chips" id="sources" role="group" aria-label="Sources"></div>
+      <div class="chips chips-wrap" id="categories" role="group" aria-label="Categories"></div>
+    </section>
+
+    <p class="count" id="count"></p>
+    <section class="grid" id="grid"></section>
+    <p class="empty" id="empty" hidden>Nothing matches. Try another word or clear a filter.</p>
+  </main>
+
+  <footer>
+    <p>Built from local clones in this workspace. Links open the original sites.</p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
